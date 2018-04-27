@@ -1,0 +1,105 @@
+<?php
+    $orderId = $_GET['orderId'];
+?>
+
+<!--edit payment method-->
+<table width="100%" border="0px" cellspacing="0" cellpadding="2px" style="border:2px solid #006633; background-color:#EEFFEE; -moz-border-radius: 5px; border-radius: 5px;">
+    <tbody><tr>
+        <td height="33px" colspan="2" align="center" style="font-weight:bold; background-color:#99CC99; border-bottom:1px solid #000;">Details for Order 45718</td>
+    </tr>
+<!--    <tr>-->
+<!--        <td align="center">Pre-Shipping and Taxes Total</td>-->
+<!--        <td align="center"><strong>$67.50</strong></td>-->
+<!--    </tr>-->
+    <form id="form11" name="form11" method="post" action="/admin/editorder/editpaymentship.php?order=
+        <?php
+            echo $orderId;
+        ?>
+    "></form>
+    <tr>
+        <td align="center" style="border-top:1px dotted #000;">Purchase Method</td>
+        <td align="center" style="border-top:1px dotted #000;"><select name="method" id="method" onchange="changeoption()">
+                <option value="VISA">VISA</option>
+                <option value="Mastercard">Mastercard</option>
+                <option value="PO">P.O. #</option>
+                <option value="Wire">Wire</option>
+                <option value="Credit">Credit</option>
+                <option value=""></option>
+            </select></td>
+    </tr>
+    <tr>
+        <td align="center">Card # (if applicable)</td>
+        <td align="center"><input name="cardnumber" type="text" id="cardnumber" value="" size="20"></td>
+    </tr>
+    <tr>
+        <td align="center">Card Exp (if applicable, MM/YY)</td>
+        <td align="center"><input name="exp" type="text" id="exp" value="" size="6"></td>
+    </tr>
+    <tr>
+        <td align="center">Card Name (if applicable)</td>
+        <td align="center"><input name="cardname" type="text" id="cardname" value="" size="20"></td>
+    </tr>
+    <tr>
+        <td align="center">P.O. # (if applicable)</td>
+        <td align="center"><input name="ponumber" type="text" id="ponumber" value="" size="20"></td>
+    </tr>
+    <tr>
+        <td align="center" style="border-top:1px dotted #000;">Shipping</td>
+        <td align="center" style="border-top:1px dotted #000;"><select name="ship" id="ship" onchange="changeoption()">
+                <option value="FedEx">FedEx</option>
+                <option value="Progressive">Progressive</option>
+                <option value="DHL">DHL</option>
+                <option value="KWE">KWE</option>
+                <option value="Other">Other</option>
+            </select></td>
+    </tr>
+    <tr>
+        <td align="center">Customer FedEx # (if applicable)</td>
+        <td align="center"><input name="shipNumber" type="text" id="shipNumber" value="023456987" size="20"></td>
+    </tr>
+    <tr>
+        <td align="center">Ship Date (YYYY-MM-DD)</td>
+        <td align="center"><input name="shipDate" type="text" id="shipDate" rel="tcal" value="" size="12" class="tcalInput"></td>
+    </tr>
+    <tr>
+        <td align="center">Ship Fee</td>
+        <td align="center"><input name="shipFee" type="text" id="shipFee" value="" size="10"></td>
+    </tr>
+    <tr>
+        <td align="center">Bank Fee</td>
+        <td align="center"><input name="bankFee" type="text" id="bankFee" value="" size="10"></td>
+    </tr>
+    <tr>
+        <td align="center">Tax ID #</td>
+        <td align="center"><input name="taxID" type="text" id="taxID" value="" size="10"></td>
+    </tr>
+    <tr>
+        <td align="center" style="border-top:1px dotted #000;">Location (for Taxes)</td>
+        <td align="center" style="border-top:1px dotted #000;"><select name="location" id="location" onchange="changeoption()">
+                <option value="BC">BC</option> <option value="Outside">Outside Canada</option>
+                <option value="BC">BC</option>
+                <option value="Alberta">Alberta</option>
+                <option value="Saskatchewan">Saskatchewan</option>
+                <option value="Manitoba">Manitoba</option>
+                <option value="Ontario">Ontario</option>
+                <option value="Quebec">Quebec</option>
+                <option value="New Brunswick">New Brunswick</option>
+                <option value="Nova Scotia">Nova Scotia</option>
+                <option value="PEI">PEI</option>
+                <option value="Newfoundland">Newfoundland</option>
+                <option value="Yukon">Yukon</option>
+                <option value="NWT">NWT</option>
+                <option value="Nunavut">Nunavut</option>
+            </select></td>
+    </tr>
+    <tr>
+        <td align="center" style="border-top:1px dotted #000;">Terms</td>
+        <td align="center" style="border-top:1px dotted #000;"><select name="terms" id="terms" onchange="changeoption()">
+                <option value="Net 30">Net 30</option>
+                <option value="Net 60">Net 60</option>
+                <option value="Net 90">Net 90</option>
+                <option value="Due on Receipt">Due on Receipt</option>
+                <option value="Prepayment">Prepayment</option>
+            </select></td>
+    </tr>
+    </tbody></table>

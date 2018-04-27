@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+    <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+        <menu>
+          <add id="Abm_EditOrder::greetings" title="Greetings" translate="title" module="Abm_EditOrder" parent="Magento_Backend::content" sortOrder="50" dependsOnModule="Abm_EditOrder" resource="Abm_EditOrder::greetings"/>
+          <add id="Abm_EditOrder::greetings_payment" title="Payment" translate="title" module="Abm_EditOrder" parent="Abm_EditOrder::greetings" sortOrder="10" dependsOnModule="Abm_EditOrder" action="editorder/payment/edit" resource="Abm_EditOrder::greetings"/>
+        </menu>
+    </config>
+  
